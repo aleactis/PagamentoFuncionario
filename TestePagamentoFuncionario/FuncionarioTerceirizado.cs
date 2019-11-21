@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace TestePagamentoFuncionario
+namespace PagamentoFuncionario
 {
-    class TesteFuncionarioTerceirizado : TesteFuncionario
+    class FuncionarioTerceirizado : Funcionario
     {
         public double TaxaAdicional { get; set; }
 
-        public TesteFuncionarioTerceirizado()
+        public FuncionarioTerceirizado()
         {
         }
 
-        public TesteFuncionarioTerceirizado(string nome, int horas, double valorPorHora, double taxaAdicional)
+        public FuncionarioTerceirizado(string nome, int horas, double valorPorHora, double taxaAdicional)
             : base (nome, horas, valorPorHora)
         {
             TaxaAdicional = taxaAdicional;

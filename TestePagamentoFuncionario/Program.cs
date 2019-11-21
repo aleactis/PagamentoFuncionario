@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using static System.Console;
 using System.Globalization;
 
-namespace TestePagamentoFuncionario
+namespace PagamentoFuncionario
 {
     class Program
     {
         static void Main(string[] args)
         {
-            List<TesteFuncionario> lista = new List<TesteFuncionario>();
+            List<Funcionario> lista = new List<Funcionario>();
 
             Write("Entre com o número de funcionários: ");
             int n = int.Parse(Console.ReadLine());
@@ -30,16 +30,16 @@ namespace TestePagamentoFuncionario
                 {
                     Write("Taxa Adicional: ");
                     double taxaAdicional = double.Parse(ReadLine(), CultureInfo.InvariantCulture);
-                    lista.Add(new TesteFuncionarioTerceirizado(nome, horas, valorPorHora,taxaAdicional));
+                    lista.Add(new FuncionarioTerceirizado(nome, horas, valorPorHora,taxaAdicional));
                 }
                 else
                 {
-                    lista.Add(new TesteFuncionario(nome, horas, valorPorHora));
+                    lista.Add(new Funcionario(nome, horas, valorPorHora));
                 }
             }
             WriteLine();
             WriteLine("PAGAMENTOS: ");
-            foreach (TesteFuncionario func in lista)
+            foreach (Funcionario func in lista)
             {
                 WriteLine($"{func.Nome} - $ {func.Pagamento().ToString("F2", CultureInfo.InvariantCulture)}");
             }

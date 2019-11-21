@@ -2,19 +2,19 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace TestePagamentoFuncionario
+namespace PagamentoFuncionario
 {
-    class TesteFuncionario
+    class Funcionario
     {
         public string Nome { get; set; }
         public int Horas { get; set; }
         public double ValorPorHora { get; set; }
 
-        public TesteFuncionario()
+        public Funcionario()
         {
         }
 
-        public TesteFuncionario(string nome, int horas, double valorPorHora)
+        public Funcionario(string nome, int horas, double valorPorHora)
         {
             Nome = nome;
             Horas = horas;
